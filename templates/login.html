@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Student Dropout</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: #111b31;
+        --text: #e8eefc;
+        --muted: #a9b4d0;
+        --accent: #5aa2ff;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      .container {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      .card {
+        margin-top: 64px;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 22px;
+      }
+      .message {
+        background: rgba(90, 162, 255, 0.14);
+        border: 1px solid rgba(90, 162, 255, 0.35);
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 10px;
+        margin-bottom: 14px;
+      }
+      label {
+        display: block;
+        margin: 12px 0 6px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+      }
+      button {
+        margin-top: 14px;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #0b1220;
+        font-weight: 700;
+        cursor: pointer;
+        width: 100%;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Login</h1>
+
+        {% if message %}
+          <div class="message">{{ message }}</div>
+        {% endif %}
+
+        <form method="post" action="/login">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter username" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password" required />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <p style="color: var(--muted); margin-top: 14px;">
+          Back to <a href="/">Home</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Dropout</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: #111b31;
+        --text: #e8eefc;
+        --muted: #a9b4d0;
+        --accent: #5aa2ff;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background: rgba(11, 18, 32, 0.85);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+      }
+      .brand {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 16px;
+      }
+      nav a:hover {
+        color: var(--text);
+      }
+      .section {
+        padding: 56px 0;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 22px;
+      }
+      .hero h1 {
+        margin-top: 0;
+        font-size: 2rem;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 10px 14px;
+        background: var(--accent);
+        color: #0b1220;
+        font-weight: 700;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+      ul {
+        padding-left: 18px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+      }
+      label {
+        display: block;
+        margin: 12px 0 6px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      button {
+        margin-top: 14px;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #0b1220;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      footer {
+        padding: 20px 0 40px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a class="brand" href="#home">Student Dropout</a>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#technology">Technology Used</a>
+          <a href="#contact">Contact</a>
+          <a href="/login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="home" class="section hero">
+        <div class="card">
+          <h1>Know who is at risk of dropping out.</h1>
+          <p>
+            This application helps educators and administrators
+            understand student dropout risk using data-driven insights.
+            Update the text below with your project’s real features.
+          </p>
+          <a class="btn" href="#about">Learn more</a>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="card">
+          <h2>About</h2>
+          <p>
+            Replace this paragraph with a short description of your complete application.
+            Mention what users can do (e.g., upload data, run prediction, view results, etc.)
+            and what problem it solves.
+          </p>
+          <p style="color: var(--muted);">
+            Example: “Students at risk of dropout are identified based on academic and personal
+            factors, enabling early interventions.”
+          </p>
+        </div>
+      </section>
+
+      <section id="technology" class="section">
+        <div class="card">
+          <h2>Technology Used</h2>
+          <ul>
+            <li>Python</li>
+            <li>Flask (backend)</li>
+            <li>HTML/CSS (frontend)</li>
+          </ul>
+          <p style="color: var(--muted);">
+            Update this list with your real stack (e.g., scikit-learn, pandas, Bootstrap, etc.).
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="card">
+          <h2>Contact</h2>
+          <p style="color: var(--muted);">Replace with your details:</p>
+          <p><strong>Email:</strong> your-email@example.com</p>
+          <p><strong>Phone:</strong> +00 00000 00000</p>
+          <p style="color: var(--muted);">Or use this (placeholder) form:</p>
+          <form onsubmit="return false;">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+
+            <button type="submit" disabled>Send (not wired yet)</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      © {{ 2026 }} Student Dropout. Built with Flask.
+    </footer>
+  </body>
+</html>
+
